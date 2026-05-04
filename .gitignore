@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+
+checkpoints/
+dataset/
+
+*.pkl
+*.pt
+*.pth
+*.bin
+*.onnx
+
+.DS_Store

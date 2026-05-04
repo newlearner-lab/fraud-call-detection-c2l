@@ -121,20 +121,22 @@ else:
 
 
     #Define tokenizer
-    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+    #tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+    MODEL_NAME = "hfl/chinese-roberta-wwm-ext"
+    tokenizer = BertTokenizer.from_pretrained(MODEL_NAME)
 
     #Encode dataset
-    anc_train_encodings = tokenizer(anc_train_texts, truncation=True, padding=True)
-    anc_val_encodings = tokenizer(anc_val_texts, truncation=True, padding=True)
-    anc_test_encodings = tokenizer(anc_test_texts, truncation=True, padding=True)
+    anc_train_encodings = tokenizer(anc_train_texts, truncation=True, padding=True, max_length=512)
+    anc_val_encodings = tokenizer(anc_val_texts, truncation=True, padding=True, max_length=512)
+    anc_test_encodings = tokenizer(anc_test_texts, truncation=True, padding=True, max_length=512)
 
-    pos_train_encodings = tokenizer(pos_train_texts, truncation=True, padding=True)
-    pos_val_encodings = tokenizer(pos_val_texts, truncation=True, padding=True)
-    pos_test_encodings = tokenizer(pos_test_texts, truncation=True, padding=True)
+    pos_train_encodings = tokenizer(pos_train_texts, truncation=True, padding=True, max_length=512)
+    pos_val_encodings = tokenizer(pos_val_texts, truncation=True, padding=True, max_length=512)
+    pos_test_encodings = tokenizer(pos_test_texts, truncation=True, padding=True, max_length=512)
 
-    neg_train_encodings = tokenizer(neg_train_texts, truncation=True, padding=True)
-    neg_val_encodings = tokenizer(neg_val_texts, truncation=True, padding=True)
-    neg_test_encodings = tokenizer(neg_test_texts, truncation=True, padding=True)
+    neg_train_encodings = tokenizer(neg_train_texts, truncation=True, padding=True, max_length=512)
+    neg_val_encodings = tokenizer(neg_val_texts, truncation=True, padding=True, max_length=512)
+    neg_test_encodings = tokenizer(neg_test_texts, truncation=True, padding=True, max_length=512)
 
     
     #make dataset class
@@ -160,7 +162,8 @@ val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False)
 test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False)
 
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
-model = BertForCounterfactualRobustness.from_pretrained('bert-base-uncased', num_labels=NUM_LABELS)
+#model = BertForCounterfactualRobustness.from_pretrained('bert-base-uncased', num_labels=NUM_LABELS)
+model = BertForCounterfactualRobustness.from_pretrained(MODEL_NAME, num_labels=NUM_LABELS)
 model = torch.nn.DataParallel(model)
 model.to(device)
 

@@ -1,3 +1,21 @@
+# Fraud Call Detection with C2L-Chinese-RoBERTa
+
+本项目基于 AAAI 2022 论文 **C2L: Causally Contrastive Learning for Robust Text Classification** 的官方 PyTorch 实现进行修改与扩展，用于完成中文虚假通话 / 诈骗通话检测任务。
+
+原始 C2L 项目主要以英文 CFIMDb 数据集作为示例，本项目将其迁移到中文通话文本分类场景中，构建了基于 Chinese-RoBERTa 的虚假通话检测模型，并进一步引入 C2L 对比学习机制提升模型鲁棒性。
+
+---
+
+## 1. Task Description
+
+本项目将虚假通话检测建模为中文文本二分类任务：
+
+```text
+输入：通话文本 specific_dialogue_content
+输出：是否诈骗 is_fraud
+
+
+
 # C2L: Causally Contrastive Learning for Robust Text Classification
 Official pytorch implementation of [**C2L: Causally Contrastive Learning for Robust Text Classification**](https://ojs.aaai.org/index.php/AAAI/article/download/21296/version/19583/21045) (AAAI 2022) by Seungtaek Choi*, Myeongho Jeong*, Hojae Han, Seung-won Hwang.
 

@@ -14,8 +14,15 @@
 输入：通话文本 specific_dialogue_content
 输出：是否诈骗 is_fraud
 
+##2.
+数据预处理代码:prepare_fraud_c2l_data.py
+训练代码：train_bert_imdb_pairwise_shellscript.py
+评估代码：evaluate_and_plot.py
+评估代码生成的图表文件夹：eval_outputs
 
 
+
+以下是原项目（改动前）的介绍
 # C2L: Causally Contrastive Learning for Robust Text Classification
 Official pytorch implementation of [**C2L: Causally Contrastive Learning for Robust Text Classification**](https://ojs.aaai.org/index.php/AAAI/article/download/21296/version/19583/21045) (AAAI 2022) by Seungtaek Choi*, Myeongho Jeong*, Hojae Han, Seung-won Hwang.
 

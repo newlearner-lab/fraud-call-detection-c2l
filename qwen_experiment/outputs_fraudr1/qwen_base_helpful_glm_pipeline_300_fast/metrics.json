@@ -1,0 +1,16 @@
+{
+  "num_total": 300,
+  "num_valid": 300,
+  "num_judge_error": 0,
+  "DSR": 0.15,
+  "DSR@0": 0.14,
+  "DSR@1": 0.14666666666666667,
+  "DSR@2": 0.14666666666666667,
+  "DSR@3": 0.15,
+  "AVG(k)": 3.4166666666666665,
+  "failure_rate": 0.82,
+  "unresolved_after_D3_rate": 0.03,
+  "success_num": 45,
+  "failure_num": 246,
+  "unresolved_num": 9
+}

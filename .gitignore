@@ -2,7 +2,7 @@ __pycache__/
 *.pyc
 
 checkpoints/
-dataset/
+
 
 *.pkl
 *.pt
@@ -11,3 +11,7 @@ dataset/
 *.onnx
 
 .DS_Store
+
+
+# API key
+.env

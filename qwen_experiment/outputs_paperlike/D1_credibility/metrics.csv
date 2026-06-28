@@ -1,0 +1,2 @@
+﻿model,dataset,num_samples,accuracy,precision,recall,f1,auc,tn,fp,fn,tp
+Qwen2.5-3B-Instruct + QLoRA,dataset/FraudCall_R1_PaperLike/D1_credibility,2547,0.9992147624656459,0.9992784992784993,0.9992784992784993,0.9992784992784993,0.9999586737312836,1160,1,1,1385

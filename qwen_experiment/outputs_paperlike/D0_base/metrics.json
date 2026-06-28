@@ -1,0 +1,14 @@
+{
+  "model": "Qwen2.5-3B-Instruct + QLoRA",
+  "dataset": "dataset/FraudCall_R1_PaperLike/D0_base",
+  "num_samples": 2547,
+  "accuracy": 0.9996073812328229,
+  "precision": 0.9992790194664743,
+  "recall": 1.0,
+  "f1": 0.999639379733141,
+  "auc": 0.9999916104567268,
+  "tn": 1160,
+  "fp": 1,
+  "fn": 0,
+  "tp": 1386
+}

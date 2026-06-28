@@ -71,7 +71,7 @@ causally-contrastive-learning/
 
 ## 实验结果
 
-### 实验一：数据增强样本分布
+### 实验一：Chinese-RoBERTa 和 C2LChinese-RoBERTa 对比
 
 <img width="398" height="243" alt="image" src="https://github.com/user-attachments/assets/1a333b24-9d24-4530-abb3-f0ec843dd748" />
 
@@ -81,7 +81,7 @@ causally-contrastive-learning/
 <img width="3345" height="1984" alt="image" src="https://github.com/user-attachments/assets/019992ee-b47d-486d-b335-e1de7de198ae" />
 
 
-### 实验三：FraudR1 提示策略对比
+### 实验三：千问FraudR1 提示策略对比
 <img width="2763" height="1753" alt="image" src="https://github.com/user-attachments/assets/51d74b35-30c8-4a9f-9c68-65b6f39d5a68" />
 
 
